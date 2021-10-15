@@ -11,7 +11,7 @@ function addR() {
     table_r.className = "table row";
     table_d.className = "table content";
 
-    if(grid.hasChildNodes())
+    if(!(numRows == 0 && numCols == 0))
     {   
         for(let i = 0; i < document.querySelector("tr").childElementCount; i++)
         {
@@ -24,7 +24,8 @@ function addR() {
     else
     {
         table_r.appendChild(table_d)
-        grid.appendChild(table_r)   
+        grid.appendChild(table_r) 
+        numCols++;  
     }
 
     numRows++;
@@ -40,7 +41,7 @@ function addC() {
     table_r.className = "table row";
     table_d.className = "table content";
 
-    if(grid.hasChildNodes())
+    if(!(numCols == 0 && numRows == 0))
     {
         for(let i = 0; i < table_r_items.length; i++)
         {
@@ -53,6 +54,7 @@ function addC() {
     {
         table_r.appendChild(table_d);
         grid.appendChild(table_r);  
+        numRows++;
     }
     numCols++;
     nodeEvent();
@@ -76,7 +78,6 @@ function removeC() {
     {
         table_r_items = document.getElementsByClassName("table row");
         
-    
         for(let i = 0; i < table_r_items.length; i++)
         {
             table_d = table_r_items[i].childNodes;
@@ -102,6 +103,7 @@ function nodeEvent(){
                 element.style.backgroundColor = 'white' ;
             ;});    
      });
+     
 }
 
 //sets global var for selected color

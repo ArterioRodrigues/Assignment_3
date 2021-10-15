@@ -1,6 +1,6 @@
 body {
     margin: 10;
-    background-color:#EDF2F4 ;
+    background: white;
     text-align: center;
     font-family: verdana, sans-serif;
 }  
@@ -9,11 +9,13 @@ tr,td{
     border:1px;
     border-style: solid;
 }
+
 td{
+    
     margin: 10px;
     height: 50px;
     width: 50px;
-    background-color:#74768f;
+    background-color:white;
     border-radius: 13px;
 }
 
@@ -33,3 +35,14 @@ button{
 button:hover {
     background-color: #D90429;
 }
+
+.image {
+    background-image: url("#img.png");
+    background-color: white;
+    height: 1000px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  

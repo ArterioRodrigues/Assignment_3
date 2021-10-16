@@ -134,7 +134,16 @@ function fill(){
             element.style.backgroundColor = '#2CFA24' ;
         else if(colorSelected == "Special")
             element.className = "special";
-        ;});     
+        ;});  
+    if(colorSelected == "Special")
+    {
+        a = document.createElement('A');
+        a.href = "https://www.youtube.com/watch?v=RvBwypGUkPo&ab_channel=Rickroll%2Cbutwithadifferentlink";
+        a.appendChild(document.createTextNode("HERE"));
+        a.className = "click";
+        table_d_items[Math.floor(table_d_items.length/2)].appendChild(a);
+    }
+  
 }
 
 function clearAll(){

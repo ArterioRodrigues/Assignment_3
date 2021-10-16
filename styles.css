@@ -67,6 +67,7 @@ td:hover {
 }  
 
 #selectedID{
+  
   padding: 10px 25px;
   border: 2px solid #000;
   font-weight: bold;
@@ -77,7 +78,11 @@ td:hover {
   display: inline-block;
 
 }
-
+.click{
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
 .special{
 -webkit-animation: bgcolor 20s infinite;
 animation: bgcolor 5s infinite;

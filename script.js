@@ -96,16 +96,18 @@ function nodeEvent(){
     table_d_items = document.querySelectorAll('TD')   
     table_d_items.forEach(element => {
         element.addEventListener("click", () => { 
+            if(colorSelected != "Special")
+                element.classList.remove('special');
             if(colorSelected == "Red")
-                element.style.backgroundColor = 'Red' ;
+                element.style.backgroundColor = '#F72A3E' ;
             else if(colorSelected == "Blue")
-                element.style.backgroundColor = 'blue' ;
+                element.style.backgroundColor = '#11ABF7' ;
             else if(colorSelected == "Yellow")
-                element.style.backgroundColor = 'yellow' ;
+                element.style.backgroundColor = '#FFF990' ;
             else if(colorSelected == "Green")
-                element.style.backgroundColor = 'green' ;
-            else
-                element.style.backgroundColor = 'white' ;
+                element.style.backgroundColor = '#2CFA24' ;
+            else if(colorSelected == "Special")
+                element.className = "special";
             ;});    
      });
      
@@ -118,40 +120,46 @@ function selected(){
 
 function fill(){
     table_d_items = document.querySelectorAll('TD')   
-    table_d_items.forEach(element => {
+    table_d_items.forEach(element => { 
+        if(colorSelected != "Special")
+            element.classList.remove('special');
+
         if(colorSelected == "Red")
-            element.style.backgroundColor = 'Red' ;
+            element.style.backgroundColor = '#F72A3E' ;
         else if(colorSelected == "Blue")
-            element.style.backgroundColor = 'blue' ;
+            element.style.backgroundColor = '#11ABF7' ;
         else if(colorSelected == "Yellow")
-            element.style.backgroundColor = 'yellow' ;
+            element.style.backgroundColor = '#FFF990' ;
         else if(colorSelected == "Green")
-            element.style.backgroundColor = 'green' ;
-        else
-            element.style.backgroundColor = 'white' ;
-    });
+            element.style.backgroundColor = '#2CFA24' ;
+        else if(colorSelected == "Special")
+            element.className = "special";
+        ;});     
 }
 
 function clearAll(){
     table_d_items = document.querySelectorAll('TD')   
     table_d_items.forEach(element => {
-        element.style.backgroundColor = 'white' ;
+        element.style.background = 'transparent' ;
     });
 }
 
 function fillU(){
     table_d_items = document.querySelectorAll('TD')   
     table_d_items.forEach(element => {
-        if(element.style.backgroundColor === 'white' || element.style.backgroundColor === '')
+        if(element.style.background === 'transparent' || element.style.backgroundColor === '')
         {
             if(colorSelected == "Red")
-                element.style.backgroundColor = 'Red' ;
+                element.style.backgroundColor = '#F72A3E' ;
             else if(colorSelected == "Blue")
-                element.style.backgroundColor = 'blue' ;
+                element.style.backgroundColor = '#11ABF7' ;
             else if(colorSelected == "Yellow")
-                element.style.backgroundColor = 'yellow' ;
+                element.style.backgroundColor = '#FFF990' ;
             else if(colorSelected == "Green")
-                element.style.backgroundColor = 'green' ;
+                element.style.backgroundColor = '#2CFA24' ;
+            else if(colorSelected == "Special")
+                element.className = "special";
         }
     });
 }
+

@@ -66,6 +66,18 @@ td:hover {
   display: inline-block;
 }  
 
+#selectedID{
+  padding: 10px 25px;
+  border: 2px solid #000;
+  font-weight: bold;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+
+}
+
 .special{
 -webkit-animation: bgcolor 20s infinite;
 animation: bgcolor 5s infinite;
